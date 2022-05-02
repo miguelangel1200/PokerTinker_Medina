@@ -1,0 +1,6 @@
+<resources>
+    <color name="ic_launcher_background">#000000</color>
+    <string name="app_name">PokeTinderNew</string>
+    <string name="iniciar_sesion">iniciar sesion</string>
+    <string name="crear_cuenta_nueva">Crear Cuenta Nueva</string>
+</resources>
