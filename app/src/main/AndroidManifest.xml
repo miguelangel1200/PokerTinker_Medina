@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PokeTinderNew">
         <activity
-            android:name=".Activities.RegisterActivity"
+            android:name=".ui.view.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.LoginActivity"
+            android:name=".ui.view.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.OnboardingActivity"
+            android:name=".ui.view.OnboardingActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.SplashActivity"
+            android:name=".ui.view.SplashActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

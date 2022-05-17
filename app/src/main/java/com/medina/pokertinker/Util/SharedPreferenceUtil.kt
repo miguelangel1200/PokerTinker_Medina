@@ -2,10 +2,9 @@ package com.medina.pokertinker.Util
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.media.RouteDiscoveryPreference
 import android.util.Log
 import com.google.gson.Gson
-import com.medina.pokertinker.Data.User
+import com.medina.pokertinker.Data.model.User
 import java.lang.Exception
 
 class SharedPreferenceUtil {
@@ -22,7 +21,7 @@ class SharedPreferenceUtil {
             .getSharedPreferences(SHARED_PREFERENCE_KEY, Context.MODE_PRIVATE)
     }
 
-    fun saveFacebookUser(user: com.medina.pokertinker.Data.User){
+    fun saveFacebookUser(user: User){
         val gson = Gson()
         val jsonFacebookUser = gson.toJson(user)
 

@@ -4,7 +4,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.medina.pokertinker.Data.Onboarding
+import com.medina.pokertinker.Data.model.Onboarding
 import com.medina.pokertinker.R
 import com.medina.pokertinker.Util.inflate
 import com.medina.pokertinker.databinding.ItemOnboardingBinding

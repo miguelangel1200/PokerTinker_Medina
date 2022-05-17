@@ -1,6 +1,6 @@
 package com.medina.pokertinker.Util
 
-import com.medina.pokertinker.Data.Onboarding
+import com.medina.pokertinker.Data.model.Onboarding
 
 class Mock {
     fun getOnboarding() = listOf(

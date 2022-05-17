@@ -1,4 +1,4 @@
-package com.medina.pokertinker.Data
+package com.medina.pokertinker.Data.model
 
 import java.io.Serializable
 

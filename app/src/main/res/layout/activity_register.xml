@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.RegisterActivity">
+    tools:context=".ui.view.RegisterActivity">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -102,8 +102,7 @@
         android:textColor="@android:color/holo_red_dark"
         app:backgroundTint="#f0f0f0"
         android:layout_margin="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="UsingOnClickInXml" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <Button
         android:layout_width="match_parent"

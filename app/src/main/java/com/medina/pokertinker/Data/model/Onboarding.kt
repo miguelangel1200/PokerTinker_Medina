@@ -1,4 +1,4 @@
-package com.medina.pokertinker.Data
+package com.medina.pokertinker.Data.model
 
 data class Onboarding(
     val id: Int,
