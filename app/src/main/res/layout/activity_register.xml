@@ -94,15 +94,16 @@
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/background_rounded_edit_text"
+        android:onClick="registerUser"
         android:text="Registrar"
         android:textAllCaps="false"
-        android:onClick="registerUser"
         android:textColor="@android:color/holo_red_dark"
         app:backgroundTint="#f0f0f0"
-        android:layout_margin="16dp"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="81dp" />
 
     <Button
         android:layout_width="match_parent"

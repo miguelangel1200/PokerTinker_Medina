@@ -3,7 +3,6 @@ import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import com.medina.pokertinker.MainActivity
 import com.medina.pokertinker.databinding.ActivityLoginBinding
 import com.medina.pokertinker.ui.viewmodel.LoginViewModel
 

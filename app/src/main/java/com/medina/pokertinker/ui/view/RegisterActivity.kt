@@ -23,12 +23,7 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(ActivityRegisterB
                 builder.setTitle("Notificación").setMessage("No coinciden las contraseñas").show()
             } else {
                 builder.setTitle("Notificación").setMessage("Cuenta creada con éxito").show()
-                val user = User(
-                    "1",
-                    binding.edtUserName.text.toString(),
-                    binding.edtEmail.text.toString(),
-                    binding.edtPassword.text.toString()
-                )
+
             }
             registerViewModel.goSuccessActivity.observe(this) {
                 val intent = Intent(applicationContext, LoginActivity::class.java)

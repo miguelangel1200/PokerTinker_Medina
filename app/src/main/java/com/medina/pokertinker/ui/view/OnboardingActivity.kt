@@ -9,7 +9,7 @@ import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2
-import com.medina.pokertinker.Adapter.OnboardingAdapter
+import com.medina.pokertinker.ui.adapter.OnboardingAdapter
 import com.medina.pokertinker.R
 import com.medina.pokertinker.Util.Mock
 import com.medina.pokertinker.Util.SharedPreferenceUtil

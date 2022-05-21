@@ -1,4 +1,4 @@
-package com.medina.pokertinker.Adapter
+package com.medina.pokertinker.ui.adapter
 
 import android.view.View
 import android.view.ViewGroup
