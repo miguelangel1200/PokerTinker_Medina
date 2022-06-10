@@ -1,5 +1,6 @@
 package com.medina.pokertinker.ui.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.animation.AccelerateInterpolator
@@ -8,7 +9,9 @@ import android.view.animation.LinearInterpolator
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DefaultItemAnimator
+import com.medina.pokertinker.Data.model.PokemonDetailModel
 import com.medina.pokertinker.databinding.FragmentHomeBinding
+import com.medina.pokertinker.domain.model.MyPokemon
 import com.medina.pokertinker.domain.model.Pokemon
 import com.medina.pokertinker.ui.adapter.PokemonAdapter
 import com.medina.pokertinker.ui.viewmodel.HomeViewModel
@@ -21,7 +24,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     companion object{
         fun newInstance() = HomeFragment()
     }
-
+    private val homeViewModel: HomeViewModel by viewModels()
     private var listPokemon:List<Pokemon> = emptyList()
     private val mainViewModel: HomeViewModel by viewModels()
     private val manager by lazy { CardStackLayoutManager(context,this) }
@@ -104,7 +107,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     }
 
     override fun onClickPokemonInformation(pokemon: Pokemon) {
-        TODO("Not yet implemented")
+        val intent = Intent(context, PokemonDetailActivity::class.java)
+        intent.putExtra("ID_POKEMON", pokemon.getPokemonId())
+        startActivity(intent)
     }
 
     override fun onCardDragging(direction: Direction?, ratio: Float) {
@@ -112,7 +117,15 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     }
 
     override fun onCardSwiped(direction: Direction?) {
-        TODO("Not yet implemented")
+        if (direction == Direction.Right) {
+            val pokemon = adapter.list[manager.topPosition - 1]
+            val myPokemon = MyPokemon(
+                name = pokemon.name,
+                image = pokemon.getPokemonImage(),
+                idPokemon = pokemon.getPokemonId()
+            )
+            homeViewModel.savePokemonUseCase(myPokemon)
+        }
     }
 
     override fun onCardRewound() {
