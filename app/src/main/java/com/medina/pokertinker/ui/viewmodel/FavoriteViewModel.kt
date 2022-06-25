@@ -4,12 +4,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.medina.pokertinker.domain.model.MyPokemon
+import com.medina.pokertinker.domain.usecase.DeleteAllMyPokemonsUseCase
 import com.medina.pokertinker.domain.usecase.GetMyPokemonsUseCase
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class FavoriteViewModel @Inject constructor(
-    private val getMyPokemonsUseCase: GetMyPokemonsUseCase
+    private val getMyPokemonsUseCase: GetMyPokemonsUseCase,
+    private val deleteAllMyPokemonsUseCase: DeleteAllMyPokemonsUseCase
 ) : ViewModel(){
     val myPokemonList = MutableLiveData<List<MyPokemon>>()
     val isLoading = MutableLiveData<Boolean>()
@@ -22,6 +24,12 @@ class FavoriteViewModel @Inject constructor(
                 myPokemonList.postValue(result)
                 isLoading.postValue(false)
             }
+        }
+    }
+
+    fun deleteAllPokemon(){
+        viewModelScope.launch {
+            deleteAllMyPokemonsUseCase()
         }
     }
 }

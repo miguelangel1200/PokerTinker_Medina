@@ -9,7 +9,6 @@ import android.view.animation.LinearInterpolator
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DefaultItemAnimator
-import com.medina.pokertinker.Data.model.PokemonDetailModel
 import com.medina.pokertinker.databinding.FragmentHomeBinding
 import com.medina.pokertinker.domain.model.MyPokemon
 import com.medina.pokertinker.domain.model.Pokemon
