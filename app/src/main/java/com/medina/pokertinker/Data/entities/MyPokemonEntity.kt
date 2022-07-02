@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.medina.pokertinker.domain.model.MyPokemon
 
-@Entity
+@Entity(tableName = "pokemon_table")
 data class MyPokemonEntity(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id") val id: Int = 0,
